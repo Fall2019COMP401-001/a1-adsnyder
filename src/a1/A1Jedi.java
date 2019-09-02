@@ -11,6 +11,7 @@ public class A1Jedi {
 		//Declaring first set of variables and initializing those that need to be initialized
 		int itemNumber = scan.nextInt();
 		String[] itemArr = new String[itemNumber];
+		int[] itemFlagArr = new int[itemNumber];
 		int[] itemCountArr = new int[itemNumber];
 		int[] customerItemCountArr = new int[itemNumber];
 		String throwawayString;
@@ -40,10 +41,17 @@ public class A1Jedi {
 				
 				for(int k = 0; k < itemArr.length; k++) {
 					if(itemArr[k].equals(itemName)) {
+						if (itemFlagArr[k] == 0) {
+							customerItemCountArr[k]++;
+						}
 						itemCountArr[k] = itemCountArr[k] + itemNum;
-						customerItemCountArr[k]++;
+						itemFlagArr[k] = -1;
 					}
 				}
+			}
+			
+			for(int j = 0; j < itemFlagArr.length; j++) {
+				itemFlagArr[j] = 0;
 			}
 		}
 		
