@@ -77,8 +77,8 @@ public class A1Adept {
 		//Finding the average total cost
 		average = summedCost / totalCosts.length;
 		
-		System.out.println("Biggest: " + highestCostName + " (" + highestCost + ")");
-		System.out.println("Smallest: " + lowestCostName + " (" + lowestCost + ")");
+		System.out.println("Biggest: " + highestCostName + " (" + String.format("%.2f", highestCost) + ")");
+		System.out.println("Smallest: " + lowestCostName + " (" + String.format("%.2f", lowestCost) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
 	}
 }
